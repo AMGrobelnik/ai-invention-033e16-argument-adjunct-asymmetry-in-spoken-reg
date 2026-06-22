@@ -1,0 +1,153 @@
+{
+  "datasets": [
+    {
+      "dataset": "commul/universal_dependencies",
+      "examples": [
+        {
+          "input": "{\"text\": \"eee , iz tega časa so ohranjena še razna železna orodja , tudi pri nas , grobišča in tudi gradišča , tako imenovana , na hribih .\", \"sent_len\": 27, \"treebank\": \"sl_sst\", \"modality\": \"spoken\", \"language\": \"Slovenian\", \"arc_stats\": {\"ARGUMENT\": {\"count\": 1, \"mdd\": 4.0}, \"ADJUNCT\": {\"count\": 0, \"mdd\": null}, \"MODIFIER\": {\"count\": 8, \"mdd\": 2.625}}}",
+          "output": "{\"modality\": \"spoken\", \"language\": \"Slovenian\", \"argument_mdd\": 4.0, \"adjunct_mdd\": null, \"modifier_mdd\": 2.625, \"argument_count\": 1, \"adjunct_count\": 0, \"modifier_count\": 8, \"noun_with_case\": 5, \"pron_with_case\": 1, \"noun_total\": 5, \"pron_total\": 1}",
+          "metadata_fold": "full",
+          "metadata_treebank": "sl_sst",
+          "metadata_language": "Slovenian",
+          "metadata_modality": "spoken",
+          "metadata_sent_id": "Gos001.s12",
+          "metadata_sent_len": 27,
+          "metadata_row_index": 0,
+          "metadata_task_type": "dependency_distance_analysis"
+        },
+        {
+          "input": "{\"text\": \"zdaj , če pogledate še bolj natančno ta vzorec na vaški situli , mogoče tega pa res niste še nikoli pogledali .\", \"sent_len\": 22, \"treebank\": \"sl_sst\", \"modality\": \"spoken\", \"language\": \"Slovenian\", \"arc_stats\": {\"ARGUMENT\": {\"count\": 2, \"mdd\": 5.5}, \"ADJUNCT\": {\"count\": 0, \"mdd\": null}, \"MODIFIER\": {\"count\": 10, \"mdd\": 2.7}}}",
+          "output": "{\"modality\": \"spoken\", \"language\": \"Slovenian\", \"argument_mdd\": 5.5, \"adjunct_mdd\": null, \"modifier_mdd\": 2.7, \"argument_count\": 2, \"adjunct_count\": 0, \"modifier_count\": 10, \"noun_with_case\": 2, \"pron_with_case\": 0, \"noun_total\": 2, \"pron_total\": 0}",
+          "metadata_fold": "full",
+          "metadata_treebank": "sl_sst",
+          "metadata_language": "Slovenian",
+          "metadata_modality": "spoken",
+          "metadata_sent_id": "Gos001.s13",
+          "metadata_sent_len": 22,
+          "metadata_row_index": 1,
+          "metadata_task_type": "dependency_distance_analysis"
+        },
+        {
+          "input": "{\"text\": \"bomo videli , če bo to potegnilo , ja .\", \"sent_len\": 10, \"treebank\": \"sl_sst\", \"modality\": \"spoken\", \"language\": \"Slovenian\", \"arc_stats\": {\"ARGUMENT\": {\"count\": 2, \"mdd\": 3.0}, \"ADJUNCT\": {\"count\": 0, \"mdd\": null}, \"MODIFIER\": {\"count\": 0, \"mdd\": null}}}",
+          "output": "{\"modality\": \"spoken\", \"language\": \"Slovenian\", \"argument_mdd\": 3.0, \"adjunct_mdd\": null, \"modifier_mdd\": null, \"argument_count\": 2, \"adjunct_count\": 0, \"modifier_count\": 0, \"noun_with_case\": 0, \"pron_with_case\": 0, \"noun_total\": 0, \"pron_total\": 0}",
+          "metadata_fold": "full",
+          "metadata_treebank": "sl_sst",
+          "metadata_language": "Slovenian",
+          "metadata_modality": "spoken",
+          "metadata_sent_id": "Gos001.s15",
+          "metadata_sent_len": 10,
+          "metadata_row_index": 2,
+          "metadata_task_type": "dependency_distance_analysis"
+        },
+        {
+          "input": "{\"text\": \"\\\"Tistega večera sem preveč popil, zgodilo se je mesec dni po tem, ko sem izvedel, da me žena vara.\", \"sent_len\": 24, \"treebank\": \"sl_ssj\", \"modality\": \"written\", \"language\": \"Slovenian\", \"arc_stats\": {\"ARGUMENT\": {\"count\": 3, \"mdd\": 2.6667}, \"ADJUNCT\": {\"count\": 1, \"mdd\": 4.0}, \"MODIFIER\": {\"count\": 3, \"mdd\": 1.6667}}}",
+          "output": "{\"modality\": \"written\", \"language\": \"Slovenian\", \"argument_mdd\": 2.6667, \"adjunct_mdd\": 4.0, \"modifier_mdd\": 1.6667, \"argument_count\": 3, \"adjunct_count\": 1, \"modifier_count\": 3, \"noun_with_case\": 4, \"pron_with_case\": 1, \"noun_total\": 4, \"pron_total\": 2}",
+          "metadata_fold": "full",
+          "metadata_treebank": "sl_ssj",
+          "metadata_language": "Slovenian",
+          "metadata_modality": "written",
+          "metadata_sent_id": "ssj1.1.1",
+          "metadata_sent_len": 24,
+          "metadata_row_index": 0,
+          "metadata_task_type": "dependency_distance_analysis"
+        },
+        {
+          "input": "{\"text\": \"Dogodek v Ankaranu je bila dramatična nesreča.\", \"sent_len\": 8, \"treebank\": \"sl_ssj\", \"modality\": \"written\", \"language\": \"Slovenian\", \"arc_stats\": {\"ARGUMENT\": {\"count\": 1, \"mdd\": 6.0}, \"ADJUNCT\": {\"count\": 0, \"mdd\": null}, \"MODIFIER\": {\"count\": 2, \"mdd\": 1.5}}}",
+          "output": "{\"modality\": \"written\", \"language\": \"Slovenian\", \"argument_mdd\": 6.0, \"adjunct_mdd\": null, \"modifier_mdd\": 1.5, \"argument_count\": 1, \"adjunct_count\": 0, \"modifier_count\": 2, \"noun_with_case\": 2, \"pron_with_case\": 0, \"noun_total\": 2, \"pron_total\": 0}",
+          "metadata_fold": "full",
+          "metadata_treebank": "sl_ssj",
+          "metadata_language": "Slovenian",
+          "metadata_modality": "written",
+          "metadata_sent_id": "ssj1.1.2",
+          "metadata_sent_len": 8,
+          "metadata_row_index": 1,
+          "metadata_task_type": "dependency_distance_analysis"
+        },
+        {
+          "input": "{\"text\": \"Dekle je ob vzvratni vožnji začelo vpiti, da bi jo utišal, sem prijel nož.\", \"sent_len\": 17, \"treebank\": \"sl_ssj\", \"modality\": \"written\", \"language\": \"Slovenian\", \"arc_stats\": {\"ARGUMENT\": {\"count\": 4, \"mdd\": 2.0}, \"ADJUNCT\": {\"count\": 1, \"mdd\": 3.0}, \"MODIFIER\": {\"count\": 1, \"mdd\": 1.0}}}",
+          "output": "{\"modality\": \"written\", \"language\": \"Slovenian\", \"argument_mdd\": 2.0, \"adjunct_mdd\": 3.0, \"modifier_mdd\": 1.0, \"argument_count\": 4, \"adjunct_count\": 1, \"modifier_count\": 1, \"noun_with_case\": 3, \"pron_with_case\": 1, \"noun_total\": 3, \"pron_total\": 1}",
+          "metadata_fold": "full",
+          "metadata_treebank": "sl_ssj",
+          "metadata_language": "Slovenian",
+          "metadata_modality": "written",
+          "metadata_sent_id": "ssj1.1.3",
+          "metadata_sent_len": 17,
+          "metadata_row_index": 2,
+          "metadata_task_type": "dependency_distance_analysis"
+        },
+        {
+          "input": "{\"text\": \"euh, bon, pour aller du CRDT à la gare, euh, de Grenoble, je, euh, ben, je sors déjà du CRDT.\", \"sent_len\": 31, \"treebank\": \"fr_rhapsodie\", \"modality\": \"spoken\", \"language\": \"French\", \"arc_stats\": {\"ARGUMENT\": {\"count\": 1, \"mdd\": 1.0}, \"ADJUNCT\": {\"count\": 1, \"mdd\": 20.0}, \"MODIFIER\": {\"count\": 2, \"mdd\": 3.0}}}",
+          "output": "{\"modality\": \"spoken\", \"language\": \"French\", \"argument_mdd\": 1.0, \"adjunct_mdd\": 20.0, \"modifier_mdd\": 3.0, \"argument_count\": 1, \"adjunct_count\": 1, \"modifier_count\": 2, \"noun_with_case\": 0, \"pron_with_case\": 2, \"noun_total\": 1, \"pron_total\": 2}",
+          "metadata_fold": "full",
+          "metadata_treebank": "fr_rhapsodie",
+          "metadata_language": "French",
+          "metadata_modality": "spoken",
+          "metadata_sent_id": "Rhap_M0016-1",
+          "metadata_sent_len": 31,
+          "metadata_row_index": 0,
+          "metadata_task_type": "dependency_distance_analysis"
+        },
+        {
+          "input": "{\"text\": \"je remonte, euh, l'avenue Général Champon.\", \"sent_len\": 10, \"treebank\": \"fr_rhapsodie\", \"modality\": \"spoken\", \"language\": \"French\", \"arc_stats\": {\"ARGUMENT\": {\"count\": 2, \"mdd\": 3.0}, \"ADJUNCT\": {\"count\": 0, \"mdd\": null}, \"MODIFIER\": {\"count\": 1, \"mdd\": 1.0}}}",
+          "output": "{\"modality\": \"spoken\", \"language\": \"French\", \"argument_mdd\": 3.0, \"adjunct_mdd\": null, \"modifier_mdd\": 1.0, \"argument_count\": 2, \"adjunct_count\": 0, \"modifier_count\": 1, \"noun_with_case\": 0, \"pron_with_case\": 1, \"noun_total\": 2, \"pron_total\": 1}",
+          "metadata_fold": "full",
+          "metadata_treebank": "fr_rhapsodie",
+          "metadata_language": "French",
+          "metadata_modality": "spoken",
+          "metadata_sent_id": "Rhap_M0016-2",
+          "metadata_sent_len": 10,
+          "metadata_row_index": 1,
+          "metadata_task_type": "dependency_distance_analysis"
+        },
+        {
+          "input": "{\"text\": \"je traverse, euh, face à la, euh, MDE.\", \"sent_len\": 13, \"treebank\": \"fr_rhapsodie\", \"modality\": \"spoken\", \"language\": \"French\", \"arc_stats\": {\"ARGUMENT\": {\"count\": 1, \"mdd\": 1.0}, \"ADJUNCT\": {\"count\": 0, \"mdd\": null}, \"MODIFIER\": {\"count\": 1, \"mdd\": 6.0}}}",
+          "output": "{\"modality\": \"spoken\", \"language\": \"French\", \"argument_mdd\": 1.0, \"adjunct_mdd\": null, \"modifier_mdd\": 6.0, \"argument_count\": 1, \"adjunct_count\": 0, \"modifier_count\": 1, \"noun_with_case\": 0, \"pron_with_case\": 1, \"noun_total\": 1, \"pron_total\": 1}",
+          "metadata_fold": "full",
+          "metadata_treebank": "fr_rhapsodie",
+          "metadata_language": "French",
+          "metadata_modality": "spoken",
+          "metadata_sent_id": "Rhap_M0016-3",
+          "metadata_sent_len": 13,
+          "metadata_row_index": 2,
+          "metadata_task_type": "dependency_distance_analysis"
+        },
+        {
+          "input": "{\"text\": \"Les commotions cérébrales sont devenu si courantes dans ce sport qu'on les considére presque comme la routine.\", \"sent_len\": 19, \"treebank\": \"fr_gsd\", \"modality\": \"written\", \"language\": \"French\", \"arc_stats\": {\"ARGUMENT\": {\"count\": 6, \"mdd\": 3.3333}, \"ADJUNCT\": {\"count\": 0, \"mdd\": null}, \"MODIFIER\": {\"count\": 3, \"mdd\": 1.0}}}",
+          "output": "{\"modality\": \"written\", \"language\": \"French\", \"argument_mdd\": 3.3333, \"adjunct_mdd\": null, \"modifier_mdd\": 1.0, \"argument_count\": 6, \"adjunct_count\": 0, \"modifier_count\": 3, \"noun_with_case\": 0, \"pron_with_case\": 2, \"noun_total\": 3, \"pron_total\": 2}",
+          "metadata_fold": "full",
+          "metadata_treebank": "fr_gsd",
+          "metadata_language": "French",
+          "metadata_modality": "written",
+          "metadata_sent_id": "fr-ud-train_00001",
+          "metadata_sent_len": 19,
+          "metadata_row_index": 0,
+          "metadata_task_type": "dependency_distance_analysis"
+        },
+        {
+          "input": "{\"text\": \"L'œuvre est située dans la galerie des batailles, dans le château de Versailles.\", \"sent_len\": 17, \"treebank\": \"fr_gsd\", \"modality\": \"written\", \"language\": \"French\", \"arc_stats\": {\"ARGUMENT\": {\"count\": 1, \"mdd\": 2.0}, \"ADJUNCT\": {\"count\": 0, \"mdd\": null}, \"MODIFIER\": {\"count\": 2, \"mdd\": 2.5}}}",
+          "output": "{\"modality\": \"written\", \"language\": \"French\", \"argument_mdd\": 2.0, \"adjunct_mdd\": null, \"modifier_mdd\": 2.5, \"argument_count\": 1, \"adjunct_count\": 0, \"modifier_count\": 2, \"noun_with_case\": 0, \"pron_with_case\": 0, \"noun_total\": 4, \"pron_total\": 0}",
+          "metadata_fold": "full",
+          "metadata_treebank": "fr_gsd",
+          "metadata_language": "French",
+          "metadata_modality": "written",
+          "metadata_sent_id": "fr-ud-train_00002",
+          "metadata_sent_len": 17,
+          "metadata_row_index": 1,
+          "metadata_task_type": "dependency_distance_analysis"
+        },
+        {
+          "input": "{\"text\": \"Le comportement de la Turquie vis-à-vis du problème palestinien a fait qu'elle n'est plus en odeur de sainteté auprès de la communauté juive en générale, et américaine en particulier.\", \"sent_len\": 34, \"treebank\": \"fr_gsd\", \"modality\": \"written\", \"language\": \"French\", \"arc_stats\": {\"ARGUMENT\": {\"count\": 3, \"mdd\": 7.3333}, \"ADJUNCT\": {\"count\": 0, \"mdd\": null}, \"MODIFIER\": {\"count\": 10, \"mdd\": 2.3}}}",
+          "output": "{\"modality\": \"written\", \"language\": \"French\", \"argument_mdd\": 7.3333, \"adjunct_mdd\": null, \"modifier_mdd\": 2.3, \"argument_count\": 3, \"adjunct_count\": 0, \"modifier_count\": 10, \"noun_with_case\": 0, \"pron_with_case\": 1, \"noun_total\": 5, \"pron_total\": 1}",
+          "metadata_fold": "full",
+          "metadata_treebank": "fr_gsd",
+          "metadata_language": "French",
+          "metadata_modality": "written",
+          "metadata_sent_id": "fr-ud-train_00003",
+          "metadata_sent_len": 34,
+          "metadata_row_index": 2,
+          "metadata_task_type": "dependency_distance_analysis"
+        }
+      ]
+    }
+  ]
+}
