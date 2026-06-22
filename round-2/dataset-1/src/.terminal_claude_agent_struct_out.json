@@ -1,0 +1,18 @@
+{
+  "title": "UD Spoken-Written Treebank Pairs: Dependency Distance & Case-Richness",
+  "layman_summary": "Downloads and processes Universal Dependencies treebanks for Slovenian and French (spoken vs. written pairs), computing per-sentence dependency distances by arc type and morphological case coverage to enable spoken-written contrast analysis.",
+  "summary": "This artifact loads four Universal Dependencies treebank configurations from commul/universal_dependencies on HuggingFace (sl_sst: Slovenian spoken GOS corpus, sl_ssj: Slovenian written standard treebank, fr_rhapsodie: French spoken Rhapsodie corpus, fr_gsd: French written GSD treebank) and produces 35,896 sentence-level examples for the exp_sel_data_out format. Each example encodes: (1) the sentence text, length, treebank, modality, and language; (2) per-sentence mean dependency distance broken down into ARGUMENT (nsubj/obj/iobj/ccomp/xcomp), ADJUNCT (advcl/acl/acl:relcl), and MODIFIER (nmod/amod/advmod) categories; (3) per-sentence NOUN and PRON case marking counts. A global log-log OLS regression (log MDD ~ log sent_len) is fit across all treebanks pooled; per-treebank mean residuals serve as the sentence-length-normalized MDD metric. Key aggregate results stored in data_out.json: Slovenian case richness 0.94, French case richness 0.10; spoken ARG MDD residuals lower than written in both languages (Slovenian: -0.090, French: -0.225); spoken ADJUNCT residuals mixed (Slovenian: -0.050, French: +0.135). The treebank audit is documented in audit_report.txt. All data sourced from commul/universal_dependencies (1,587 HF downloads, UD v2.17). No LLM API calls were made ($0 spend). The data.py script is fully reproducible using the pinned pyproject.toml dependencies.",
+  "out_expected_files": {
+    "script": "data.py",
+    "datasets": [
+      {
+        "full": ["full_data_out.json"],
+        "mini": "mini_data_out.json",
+        "preview": "preview_data_out.json"
+      }
+    ]
+  },
+  "upload_ignore_regexes": [
+    "(^|/)temp/datasets/"
+  ]
+}

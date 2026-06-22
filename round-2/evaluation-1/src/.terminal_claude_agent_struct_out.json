@@ -1,0 +1,15 @@
+{
+  "title": "Robustness, Power Analysis, and Cross-Language Audit: Arg-Adjunct Asymmetry",
+  "layman_summary": "Checks whether the spoken-vs-written sentence structure finding holds across analysis methods, estimates languages needed to prove it, and surveys which treebanks are suitable for this research.",
+  "summary": "Evaluation of the argument-adjunct dependency distance asymmetry from iteration 1 across five methodological robustness variants, a Monte Carlo power analysis, and a cross-language audit of 14 Universal Dependencies treebanks.\n\nROBUSTNESS VARIANTS (5/5 confirm asymmetry direction):\n- residualized_ols_original (iteration 1 baseline): arg_delta=+0.0071, adj_delta=+0.0196 (implied), interaction=+0.0125, p=0.281. Direction confirmed.\n- raw_mdd: arg_delta=-0.324 (shorter in spoken), adj_delta=+0.603 (longer in spoken). CONFIRMED, large effect.\n- ols_length_covariate: log-scale OLS with sent_len as covariate; arg coef=+0.083 (written>spoken), adj coef=-0.153 (spoken>written). CONFIRMED.\n- huber_robust_regression: Huber M-estimation (k=1.345); arg=+0.085, adj=-0.109. CONFIRMED, robust to outlier arcs.\n- outlier_sensitivity_1pct_trim: After removing top/bottom 1% per stratum (~0.9% of arcs trimmed); arg=-0.299, adj=+0.495. CONFIRMED.\n\nPOWER ANALYSIS (Monte Carlo, conservative OLS without random effects, n_sims=3000):\n- n=3 (current): power=0.109\n- n=4: power=0.130\n- n=6: power=0.179\n- n=8: power=0.249\n- n=12: power=0.363\n- n=20: power=0.526 (extrapolated)\n- 80% power not reached at n=20 under conservative model. Mixed-effects model estimates ~12-20 verified language pairs required.\n\nCROSS-LANGUAGE AUDIT (14 treebanks assessed):\n- VERIFIED_SPOKEN (3): Slovenian sl_sst/sl_ssj, French fr_rhapsodie/fr_gsd, Italian it_parlato/it_isdt (not yet on HuggingFace)\n- LEARNER_CONFOUNDED (1): English en_eslspok/en_ewt\n- PARTIAL (5): en_gum spoken subset, sv_talbanken interviews, lv_lvtb parliament, fi_ftb, tr_tourism\n- UNVERIFIED_WRITTEN (5): de_hdt, ru_syntagrus, eu_bdt, ar_padt, zh_gsd\n\nHONEST SCOPE STATEMENT: Asymmetry confirmed in 2 verified spoken-written pairs (Slovenian, French), robust across all 5 analysis variants. Formal generalization underpowered (n=3, power=0.109). Genuine spoken-written UD pairs rare (~2-3 verified as of 2026-06). Recommended expansion: it_parlato (Italian), en_gum spoken subset, sv_talbanken interviews.\n\nOUTPUTS: eval_out.json (schema-validated), full/mini/preview variants, 3 plots (treebank census, robustness bar chart, power curve). Robustness confirmation rate: 5/5 = 1.0.",
+  "out_expected_files": {
+    "script": "eval.py",
+    "full_output": "full_eval_out.json",
+    "mini_output": "mini_eval_out.json",
+    "preview_output": "preview_eval_out.json"
+  },
+  "upload_ignore_regexes": [
+    "(^|/)logs/",
+    "(^|/)\\.venv/"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "title": "Spoken-Written UD Treebank Dependency Arc Dataset",
+  "source": "commul/universal_dependencies on HuggingFace Hub",
+  "ud_version": "v2.17",
+  "best_dataset": "slovenian_spoken_written",
+  "best_dataset_rationale": "Clean spoken/written split (sl_sst=spoken, sl_ssj=written), morphologically rich (case_richness=0.9406), both treebanks use consistent UD annotation, sl_sst directly authored by reviewer Kaja Dobrovoljc (JSI)",
+  "treebanks": {
+    "sl_sst": {"language": "Slovenian", "modality": "spoken", "sentences": 6121, "arcs": 28006, "source_paper": "Dobrovoljc et al. 2017, LREC 2022"},
+    "sl_ssj": {"language": "Slovenian", "modality": "written", "sentences": 13435, "arcs": 100156, "source_paper": "Krek et al. 2019"},
+    "fr_rhapsodie": {"language": "French", "modality": "spoken", "sentences": 3209, "arcs": 12526, "source_paper": "Lacheret et al. 2014"},
+    "fr_gsd": {"language": "French", "modality": "written", "sentences": 16342, "arcs": 125020, "source_paper": "McDonald et al. 2013"},
+    "en_gum": {"language": "English", "modality": "mixed", "sentences": 14353, "arcs": 89916, "source_paper": "Zeldes 2017"},
+    "fi_tdt": {"language": "Finnish", "modality": "written", "sentences": 15136, "arcs": 85240, "source_paper": "Haverinen et al. 2014"}
+  },
+  "dataset_groups": {
+    "slovenian_spoken_written": {"languages": ["sl"], "total_arcs": 128162, "modalities": ["spoken", "written"]},
+    "french_spoken_written": {"languages": ["fr"], "total_arcs": 137546, "modalities": ["spoken", "written"]},
+    "english_gum": {"languages": ["en"], "total_arcs": 89916, "modalities": ["mixed"]},
+    "finnish_written": {"languages": ["fi"], "total_arcs": 85240, "modalities": ["written"]}
+  },
+  "case_richness_indices": {
+    "sl": {"index": 0.9406, "nominals": 81750, "case_marked": 76890},
+    "fr": {"index": 0.1043, "nominals": 103525, "case_marked": 10798},
+    "en": {"index": 0.2595, "nominals": 64888, "case_marked": 16837},
+    "fi": {"index": 0.9991, "nominals": 69925, "case_marked": 69859}
+  },
+  "relation_categories": {
+    "ARGUMENT": ["nsubj", "obj", "iobj", "ccomp", "xcomp", "csubj", "nsubj:pass", "csubj:pass", "nsubj:outer", "csubj:outer"],
+    "ADJUNCT": ["advcl", "acl", "acl:relcl", "advcl:relcl"],
+    "MODIFIER": "nmod*/amod/advmod* (base relation prefix match)"
+  },
+  "exclusions": ["PUNCT tokens (upos=PUNCT)", "root arcs (head=0)", "unclassified relations (aux, det, cop, conj, etc.)"],
+  "sentence_length": "count of non-PUNCT tokens",
+  "dependency_distance": "abs(head_1indexed - dep_1indexed)",
+  "total_examples": 440864,
+  "output_files": {
+    "full_data_out.json": "All 440864 arc examples across 4 dataset groups (169.6 MB)",
+    "mini_full_data_out.json": "First 12 examples per group for testing",
+    "preview_full_data_out.json": "Preview with truncated strings",
+    "dataset_metadata.json": "This file"
+  },
+  "known_limitations": [
+    "en_gum modality is 'mixed' — spoken/written genre split requires further metadata extraction from sent_id prefixes",
+    "fi_tdt has no spoken counterpart — useful for morphological case-richness reference only",
+    "French Rhapsodie is smaller (3209 sentences) than French GSD (16342) — unbalanced comparison",
+    "Unclassified deprels (aux, det, cop, conj, mark, etc.) excluded — these are 30-40% of all arcs"
+  ]
+}

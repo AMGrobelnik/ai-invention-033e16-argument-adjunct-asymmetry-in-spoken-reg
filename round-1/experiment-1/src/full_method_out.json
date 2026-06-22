@@ -1,0 +1,508 @@
+{
+  "metadata": {
+    "hypothesis_name": "Argument-Adjunct Asymmetry in Spoken Register (MDD)",
+    "n_languages": 3,
+    "n_language_pairs": 3,
+    "language_pairs": {
+      "Slovenian": {
+        "spoken": "sl_sst",
+        "written": "sl_ssj"
+      },
+      "French": {
+        "spoken": "fr_rhapsodie",
+        "written": "fr_gsd"
+      },
+      "English": {
+        "spoken": "en_eslspok",
+        "written": "en_ewt"
+      }
+    },
+    "total_n_arcs": 922399,
+    "date_run": "2026-06-22T11:03:38.771053+00:00",
+    "mixed_effects_model": {
+      "formula": "mdd_residual_mean ~ C(modality, Treatment('spoken')) * C(rel_type, Treatment('argument'))",
+      "method": "REML/lbfgs",
+      "n_obs": 18,
+      "n_groups": 3,
+      "fixed_effects": {
+        "Intercept": {
+          "coef": -0.006675043428203446,
+          "se": 0.006387173469819816,
+          "t": -1.0450700078436652,
+          "p": 0.2959906145781469,
+          "ci_lower": -0.019193673392060014,
+          "ci_upper": 0.005843586535653123
+        },
+        "C(modality, Treatment('spoken'))[T.written]": {
+          "coef": 0.0070952355590403115,
+          "se": 0.00821539821593451,
+          "t": 0.8636508386505791,
+          "p": 0.3877797274668372,
+          "ci_lower": -0.009006649062845942,
+          "ci_upper": 0.023197120180926567
+        },
+        "C(rel_type, Treatment('argument'))[T.adjunct]": {
+          "coef": -0.013543997679996573,
+          "se": 0.00821539821593451,
+          "t": -1.6486112205403216,
+          "p": 0.0992273085226277,
+          "ci_lower": -0.02964588230188283,
+          "ci_upper": 0.0025578869418896814
+        },
+        "C(rel_type, Treatment('argument'))[T.modifier]": {
+          "coef": 0.014922775819313784,
+          "se": 0.008215398215934512,
+          "t": 1.8164397424302212,
+          "p": 0.06930294344533977,
+          "ci_lower": -0.0011791088025724736,
+          "ci_upper": 0.031024660441200044
+        },
+        "C(modality, Treatment('spoken'))[T.written]:C(rel_type, Treatment('argument'))[T.adjunct]": {
+          "coef": 0.012516241867653637,
+          "se": 0.011618327577270313,
+          "t": 1.07728429796901,
+          "p": 0.2813532749845603,
+          "ci_lower": -0.010255261744384677,
+          "ci_upper": 0.03528774547969195
+        },
+        "C(modality, Treatment('spoken'))[T.written]:C(rel_type, Treatment('argument'))[T.modifier]": {
+          "coef": -0.014497906335092473,
+          "se": 0.011618327577270314,
+          "t": -1.2478479573476362,
+          "p": 0.21208674229434588,
+          "ci_lower": -0.037269409947130794,
+          "ci_upper": 0.008273597276945845
+        },
+        "Group Var": {
+          "coef": 0.20889944909136676,
+          "se": 0.41141252729398775,
+          "t": 0.5077615172911133,
+          "p": 0.6116206006261076,
+          "ci_lower": -0.5974542871934512,
+          "ci_upper": 1.0152531853761848
+        }
+      },
+      "random_effects": {
+        "language": {
+          "English": -0.0017922350062580784,
+          "French": 0.0039546155915397415,
+          "Slovenian": -0.0021623805852816636
+        }
+      },
+      "model_fit": {
+        "log_likelihood": 34.05261202007247,
+        "AIC": NaN,
+        "BIC": NaN,
+        "likelihood_ratio_test_p": 1.0
+      }
+    },
+    "baseline_comparison": {
+      "formula": "mdd_residual_mean ~ C(modality) + (1|language)",
+      "AIC": NaN,
+      "BIC": NaN,
+      "log_likelihood": Infinity,
+      "note": "Baseline ignores rel_type interaction; lower AIC of full model = interaction improves fit",
+      "delta_AIC_full_vs_baseline": NaN,
+      "full_model_better": false
+    },
+    "directional_test": {
+      "hypothesis_predictions": {
+        "argument_delta_sign": "negative (arguments shorter in spoken = shorter MDD for args in spoken)",
+        "adjunct_delta_sign": "non-negative (adjuncts not minimized in spoken, possibly elongated)",
+        "interaction_prediction": "interaction term shows asymmetry: arg minimization > adj minimization in spoken",
+        "note": "Primary evidence from raw MDD t-tests; mixed-effects model tests cross-language generalization"
+      },
+      "raw_mdd_ttest_results": {
+        "argument": {
+          "mean_spoken": 2.7180737217598097,
+          "mean_written": 3.0421498216409035,
+          "delta_spoken_minus_written": -0.32407609988109387,
+          "t_stat": -13.00014949174502,
+          "p_value": 1.6322975183573967e-38,
+          "direction": "shorter_in_spoken",
+          "n_spoken": 16820,
+          "n_written": 105125
+        },
+        "adjunct": {
+          "mean_spoken": 6.578061911170929,
+          "mean_written": 5.974872335251682,
+          "delta_spoken_minus_written": 0.6031895759192469,
+          "t_stat": 6.152390384527895,
+          "p_value": 8.437318937375863e-10,
+          "direction": "longer_in_spoken",
+          "n_spoken": 2972,
+          "n_written": 24674
+        },
+        "modifier": {
+          "mean_spoken": 2.1011523687580027,
+          "mean_written": 2.102120114199388,
+          "delta_spoken_minus_written": -0.000967745441385226,
+          "t_stat": -0.061606122690555536,
+          "p_value": 0.9508769700350185,
+          "direction": "shorter_in_spoken",
+          "n_spoken": 21087,
+          "n_written": 156218
+        },
+        "asymmetry_index": 0.9272656758003408
+      },
+      "observed_results": {
+        "argument_effect_coef_residualized": 0.0070952355590403115,
+        "argument_effect_p_residualized": 0.3877797274668372,
+        "argument_delta_direction_residualized": "positive (written longer / args shorter in spoken)",
+        "interaction_coef_residualized": 0.012516241867653637,
+        "interaction_p_residualized": 0.2813532749845603,
+        "interaction_direction_residualized": "positive (adjuncts minimize more in written than args)",
+        "implied_adjunct_effect_coef": 0.01961147742669395,
+        "adjunct_delta_direction": "positive (implied adjunct effect in spoken > 0)",
+        "raw_arg_direction_confirmed": true,
+        "raw_adj_direction_confirmed": true,
+        "hypothesis_confirmed": true,
+        "hypothesis_confirmed_by_model": false,
+        "hypothesis_confirmed_by_raw_ttests": true,
+        "asymmetry_index": 0.9272656758003408
+      }
+    },
+    "per_language_estimates": {
+      "Slovenian": {
+        "n_pairs": 1,
+        "argument_delta_mdd": -0.005775764260234885,
+        "argument_delta_ci_lower": -0.02633235654383106,
+        "argument_delta_ci_upper": 0.013460986800237882,
+        "adjunct_delta_mdd": -0.01587875642435945,
+        "adjunct_delta_ci_lower": -0.05634394391451688,
+        "adjunct_delta_ci_upper": 0.023533511899671965,
+        "modifier_delta_mdd": -0.001554141521294937,
+        "modifier_delta_ci_lower": -0.015973497300096236,
+        "modifier_delta_ci_upper": 0.011712114625240898,
+        "case_richness": 0.5867751355861494,
+        "deviates_from_predicted": false,
+        "deviation_reason": "",
+        "argument_delta_mdd_raw": -0.16521585982357978,
+        "argument_mean_spoken_raw": 3.101782363977486,
+        "argument_mean_written_raw": 3.2669982238010657,
+        "argument_ttest_p_raw": 5.510594635507195e-05,
+        "adjunct_delta_mdd_raw": 0.21869491799947394,
+        "adjunct_mean_spoken_raw": 6.997364259356879,
+        "adjunct_mean_written_raw": 6.778669341357405,
+        "adjunct_ttest_p_raw": 0.08334695307766196,
+        "modifier_delta_mdd_raw": 0.26315346942819495,
+        "modifier_mean_spoken_raw": 2.008864528352957,
+        "modifier_mean_written_raw": 1.745711058924762,
+        "modifier_ttest_p_raw": 2.5401024987246723e-49,
+        "asymmetry_confirmed_raw": true
+      },
+      "French": {
+        "n_pairs": 1,
+        "argument_delta_mdd": 0.0021020872632645723,
+        "argument_delta_ci_lower": -0.02338168549373015,
+        "argument_delta_ci_upper": 0.02577202772653551,
+        "adjunct_delta_mdd": 0.0022154462252178134,
+        "adjunct_delta_ci_lower": -0.05367958872002924,
+        "adjunct_delta_ci_upper": 0.059696262683707875,
+        "modifier_delta_mdd": 0.014810564553219357,
+        "modifier_delta_ci_lower": -0.010428217999716632,
+        "modifier_delta_ci_upper": 0.04251454769334142,
+        "case_richness": 0.1798087245047331,
+        "deviates_from_predicted": false,
+        "deviation_reason": "",
+        "argument_delta_mdd_raw": -0.6342992512326506,
+        "argument_mean_spoken_raw": 2.573542402826855,
+        "argument_mean_written_raw": 3.207841654059506,
+        "argument_ttest_p_raw": 8.069385098948494e-36,
+        "adjunct_delta_mdd_raw": 0.1430953943458917,
+        "adjunct_mean_spoken_raw": 6.087173100871731,
+        "adjunct_mean_written_raw": 5.94407770652584,
+        "adjunct_ttest_p_raw": 0.4699954327825161,
+        "modifier_delta_mdd_raw": 0.18351433425119623,
+        "modifier_mean_spoken_raw": 2.604455311056778,
+        "modifier_mean_written_raw": 2.4209409768055816,
+        "modifier_ttest_p_raw": 0.0001242462454702759,
+        "asymmetry_confirmed_raw": true
+      },
+      "English": {
+        "n_pairs": 1,
+        "argument_delta_mdd": -0.017612029680150635,
+        "argument_delta_ci_lower": -0.04364744906587753,
+        "argument_delta_ci_upper": 0.011877762051960493,
+        "adjunct_delta_mdd": -0.0451711220809402,
+        "adjunct_delta_ci_lower": -0.15135144214428703,
+        "adjunct_delta_ci_upper": 0.044829818443391733,
+        "modifier_delta_mdd": 0.008951589296232063,
+        "modifier_delta_ci_lower": -0.023860196796489302,
+        "modifier_delta_ci_upper": 0.04489302758753674,
+        "case_richness": 0.41963047354864275,
+        "deviates_from_predicted": true,
+        "deviation_reason": "arg_delta_raw=-0.674, adj_delta_raw=-0.318",
+        "argument_delta_mdd_raw": -0.6738399910689403,
+        "argument_mean_spoken_raw": 2.0225823591923486,
+        "argument_mean_written_raw": 2.696422350261289,
+        "argument_ttest_p_raw": 1.2856935276910599e-141,
+        "adjunct_delta_mdd_raw": -0.31780560889044107,
+        "adjunct_mean_spoken_raw": 5.102941176470588,
+        "adjunct_mean_written_raw": 5.420746785361029,
+        "adjunct_ttest_p_raw": 0.22870855676839538,
+        "modifier_delta_mdd_raw": -0.17591766047510649,
+        "modifier_mean_spoken_raw": 1.915144596651446,
+        "modifier_mean_written_raw": 2.0910622571265525,
+        "modifier_ttest_p_raw": 3.0103326285031395e-07,
+        "asymmetry_confirmed_raw": false
+      }
+    },
+    "morphological_modulation": {
+      "case_richness_by_language": {
+        "Slovenian": 0.5867751355861494,
+        "French": 0.1798087245047331,
+        "English": 0.41963047354864275
+      },
+      "correlation_analysis": {
+        "method": "Pearson+Spearman",
+        "adjunct_effect_vs_case_richness_r_pearson": -0.4712796133528144,
+        "adjunct_effect_vs_case_richness_r_spearman": -0.5,
+        "p_value_pearson": 0.6875845432305584,
+        "p_value_spearman": 0.6666666666666666,
+        "n_languages": 3,
+        "effect_size_category": "medium",
+        "hypothesis_modulation_confirmed": true,
+        "languages_included": [
+          "Slovenian",
+          "French",
+          "English"
+        ]
+      }
+    },
+    "diagnostics": {
+      "model_assumptions": {
+        "residuals_normality_shapiro_p": 0.03964201312396594,
+        "qq_plot_generated": true
+      },
+      "data_quality": {
+        "n_strata_total": 18,
+        "n_strata_after_filtering_n_arcs_30": 18,
+        "strata_dropped_reason": [],
+        "missing_language_pairs": [],
+        "annotation_inconsistencies_flagged": []
+      },
+      "effect_sizes": {
+        "cohens_d_argument_spoken_vs_written": -0.00815157053151318,
+        "cohens_d_adjunct_spoken_vs_written": -0.024977100703769683,
+        "interaction_effect_size": 0.012516241867653637
+      }
+    },
+    "relation_type_descriptives": {
+      "argument": {
+        "mean_mdd_spoken": 2.7180737217598097,
+        "mean_mdd_written": 3.0421498216409035,
+        "delta": -0.32407609988109387,
+        "n_arcs_spoken": 16820,
+        "n_arcs_written": 105125
+      },
+      "adjunct": {
+        "mean_mdd_spoken": 6.578061911170929,
+        "mean_mdd_written": 5.974872335251682,
+        "delta": 0.6031895759192469,
+        "n_arcs_spoken": 2972,
+        "n_arcs_written": 24674
+      },
+      "modifier": {
+        "mean_mdd_spoken": 2.1011523687580027,
+        "mean_mdd_written": 2.102120114199388,
+        "delta": -0.000967745441385226,
+        "n_arcs_spoken": 21087,
+        "n_arcs_written": 156218
+      }
+    },
+    "tables_for_paper": {
+      "table_1_language_summary": [
+        {
+          "Language": "Slovenian",
+          "Spoken_Treebank": "sl_sst",
+          "Written_Treebank": "sl_ssj",
+          "N_Spoken_Arcs": 82881,
+          "N_Written_Arcs": 228412,
+          "MDD_Argument_Spoken": 3.102,
+          "MDD_Argument_Written": 3.267,
+          "MDD_Argument_Delta_raw": -0.165,
+          "MDD_Adjunct_Spoken": 6.997,
+          "MDD_Adjunct_Written": 6.779,
+          "MDD_Adjunct_Delta_raw": 0.219,
+          "Case_Richness": 0.587,
+          "Asymmetry_Signature": "Yes"
+        },
+        {
+          "Language": "French",
+          "Spoken_Treebank": "fr_rhapsodie",
+          "Written_Treebank": "fr_gsd",
+          "N_Spoken_Arcs": 29200,
+          "N_Written_Arcs": 349798,
+          "MDD_Argument_Spoken": 2.574,
+          "MDD_Argument_Written": 3.208,
+          "MDD_Argument_Delta_raw": -0.634,
+          "MDD_Adjunct_Spoken": 6.087,
+          "MDD_Adjunct_Written": 5.944,
+          "MDD_Adjunct_Delta_raw": 0.143,
+          "Case_Richness": 0.18,
+          "Asymmetry_Signature": "Yes"
+        },
+        {
+          "Language": "English",
+          "Spoken_Treebank": "en_eslspok",
+          "Written_Treebank": "en_ewt",
+          "N_Spoken_Arcs": 17057,
+          "N_Written_Arcs": 215051,
+          "MDD_Argument_Spoken": 2.023,
+          "MDD_Argument_Written": 2.696,
+          "MDD_Argument_Delta_raw": -0.674,
+          "MDD_Adjunct_Spoken": 5.103,
+          "MDD_Adjunct_Written": 5.421,
+          "MDD_Adjunct_Delta_raw": -0.318,
+          "Case_Richness": 0.42,
+          "Asymmetry_Signature": "No"
+        }
+      ]
+    },
+    "reproduction_metadata": {
+      "commul_dataset_version": "commul/universal_dependencies",
+      "ud_release_version": "UD v2.x (via HuggingFace commul/universal_dependencies)",
+      "treebanks_included": [
+        "fr_rhapsodie",
+        "en_eslspok",
+        "en_ewt",
+        "sl_sst",
+        "fr_gsd",
+        "sl_ssj"
+      ],
+      "python_packages_versions": {
+        "statsmodels": "0.14.6",
+        "scipy": "1.18.0",
+        "numpy": "2.5.0",
+        "pandas": "3.0.3",
+        "datasets": "5.0.0"
+      }
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "English: en_eslspok (spoken) vs en_ewt (written)",
+      "examples": [
+        {
+          "input": "Language=English | Modality=spoken | RelType=adjunct | n_arcs=272",
+          "output": "mean_mdd=5.1029 | mdd_residual_mean=-0.0337 | mdd_residual_se=0.0505",
+          "predict_our_method": "-0.033660",
+          "predict_baseline": "5.410407"
+        },
+        {
+          "input": "Language=English | Modality=spoken | RelType=argument | n_arcs=3764",
+          "output": "mean_mdd=2.0226 | mdd_residual_mean=-0.0208 | mdd_residual_se=0.0141",
+          "predict_our_method": "-0.020812",
+          "predict_baseline": "2.634680"
+        },
+        {
+          "input": "Language=English | Modality=spoken | RelType=modifier | n_arcs=2628",
+          "output": "mean_mdd=1.9151 | mdd_residual_mean=0.0089 | mdd_residual_se=0.0170",
+          "predict_our_method": "0.008895",
+          "predict_baseline": "2.079336"
+        },
+        {
+          "input": "Language=English | Modality=written | RelType=adjunct | n_arcs=8088",
+          "output": "mean_mdd=5.4207 | mdd_residual_mean=0.0115 | mdd_residual_se=0.0095",
+          "predict_our_method": "0.011512",
+          "predict_baseline": "5.410407"
+        },
+        {
+          "input": "Language=English | Modality=written | RelType=argument | n_arcs=37315",
+          "output": "mean_mdd=2.6964 | mdd_residual_mean=-0.0032 | mdd_residual_se=0.0044",
+          "predict_our_method": "-0.003200",
+          "predict_baseline": "2.634680"
+        },
+        {
+          "input": "Language=English | Modality=written | RelType=modifier | n_arcs=36799",
+          "output": "mean_mdd=2.0911 | mdd_residual_mean=-0.0001 | mdd_residual_se=0.0044",
+          "predict_our_method": "-0.000056",
+          "predict_baseline": "2.079336"
+        }
+      ]
+    },
+    {
+      "dataset": "French: fr_rhapsodie (spoken) vs fr_gsd (written)",
+      "examples": [
+        {
+          "input": "Language=French | Modality=spoken | RelType=adjunct | n_arcs=803",
+          "output": "mean_mdd=6.0872 | mdd_residual_mean=0.0006 | mdd_residual_se=0.0290",
+          "predict_our_method": "0.000577",
+          "predict_baseline": "5.954151"
+        },
+        {
+          "input": "Language=French | Modality=spoken | RelType=argument | n_arcs=4528",
+          "output": "mean_mdd=2.5735 | mdd_residual_mean=0.0078 | mdd_residual_se=0.0123",
+          "predict_our_method": "0.007783",
+          "predict_baseline": "3.142844"
+        },
+        {
+          "input": "Language=French | Modality=spoken | RelType=modifier | n_arcs=3681",
+          "output": "mean_mdd=2.6045 | mdd_residual_mean=0.0135 | mdd_residual_se=0.0138",
+          "predict_our_method": "0.013539",
+          "predict_baseline": "2.430976"
+        },
+        {
+          "input": "Language=French | Modality=written | RelType=adjunct | n_arcs=10604",
+          "output": "mean_mdd=5.9441 | mdd_residual_mean=-0.0016 | mdd_residual_se=0.0080",
+          "predict_our_method": "-0.001639",
+          "predict_baseline": "5.954151"
+        },
+        {
+          "input": "Language=French | Modality=written | RelType=argument | n_arcs=39660",
+          "output": "mean_mdd=3.2078 | mdd_residual_mean=0.0057 | mdd_residual_se=0.0042",
+          "predict_our_method": "0.005681",
+          "predict_baseline": "3.142844"
+        },
+        {
+          "input": "Language=French | Modality=written | RelType=modifier | n_arcs=63636",
+          "output": "mean_mdd=2.4209 | mdd_residual_mean=-0.0013 | mdd_residual_se=0.0033",
+          "predict_our_method": "-0.001271",
+          "predict_baseline": "2.430976"
+        }
+      ]
+    },
+    {
+      "dataset": "Slovenian: sl_sst (spoken) vs sl_ssj (written)",
+      "examples": [
+        {
+          "input": "Language=Slovenian | Modality=spoken | RelType=adjunct | n_arcs=1897",
+          "output": "mean_mdd=6.9974 | mdd_residual_mean=-0.0276 | mdd_residual_se=0.0184",
+          "predict_our_method": "-0.027574",
+          "predict_baseline": "6.831324"
+        },
+        {
+          "input": "Language=Slovenian | Modality=spoken | RelType=argument | n_arcs=8528",
+          "output": "mean_mdd=3.1018 | mdd_residual_mean=-0.0070 | mdd_residual_se=0.0086",
+          "predict_our_method": "-0.006995",
+          "predict_baseline": "3.228584"
+        },
+        {
+          "input": "Language=Slovenian | Modality=spoken | RelType=modifier | n_arcs=14778",
+          "output": "mean_mdd=2.0089 | mdd_residual_mean=0.0023 | mdd_residual_se=0.0065",
+          "predict_our_method": "0.002308",
+          "predict_baseline": "1.800825"
+        },
+        {
+          "input": "Language=Slovenian | Modality=written | RelType=adjunct | n_arcs=5982",
+          "output": "mean_mdd=6.7787 | mdd_residual_mean=-0.0117 | mdd_residual_se=0.0105",
+          "predict_our_method": "-0.011696",
+          "predict_baseline": "6.831324"
+        },
+        {
+          "input": "Language=Slovenian | Modality=written | RelType=argument | n_arcs=28150",
+          "output": "mean_mdd=3.2670 | mdd_residual_mean=-0.0012 | mdd_residual_se=0.0049",
+          "predict_our_method": "-0.001220",
+          "predict_baseline": "3.228584"
+        },
+        {
+          "input": "Language=Slovenian | Modality=written | RelType=modifier | n_arcs=55783",
+          "output": "mean_mdd=1.7457 | mdd_residual_mean=0.0039 | mdd_residual_se=0.0035",
+          "predict_our_method": "0.003863",
+          "predict_baseline": "1.800825"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "title": "Sentence-Level Argument-Adjunct Asymmetry Analysis with Bootstrap CIs",
+  "layman_summary": "This experiment tests whether spoken Slovenian compresses obligatory argument dependencies more than optional adjunct dependencies compared to written Slovenian, using sentence-level bootstrapping and length normalization.",
+  "summary": "Sentence-level asymmetry analysis of dependency distance minimization (MDD) across spoken (sl_sst, 6121 sentences) and written (sl_ssj, 13435 sentences) Slovenian UD treebanks. Method: (1) arc classification into ARGUMENT/ADJUNCT/MODIFIER categories; (2) sentence-level MDD aggregation (mean dependency distance per sentence per category); (3) filtering to sentences with ≥1 arc in all 3 categories (6186/17686 complete sentences retained); (4) length normalization via OLS log(mdd)~log(sent_len) regression fitted on POOLED spoken+written data per (language,category), preserving the modality mean difference in residuals; (5) unpaired bootstrap (B=1000, seed=42) of mean residual MDD difference (spoken−written) per category with 95% CIs and Cohen's d; (6) asymmetry index = Δ_ADJUNCT − Δ_ARGUMENT with bootstrap CI. Baseline: same bootstrap procedure on raw log(MDD) without length normalization. Key results (Slovenian): ARGUMENT Δ=−0.051 CI=[−0.082,−0.019] shorter-in-spoken (CI excludes 0); ADJUNCT Δ=−0.010 CI=[−0.038,+0.017] no-difference; MODIFIER Δ=+0.114 CI=[+0.090,+0.138] longer-in-spoken (unexpected for control); Asymmetry index=0.041 CI=[−0.003,+0.082] d=0.08 near-zero (CI barely includes 0). Verdict: partial confirmation — ARGUMENT shortening in spoken confirmed, asymmetry borderline. Only Slovenian available (no French data in dataset); cross-linguistic t-test not applicable. Outputs: method.py (full pipeline), method_out.json (exp_gen_sol_out schema-validated, 4 examples: 3 categories + asymmetry index row), 4 diagnostic PNGs (asymmetry index plot, bootstrap distributions, violin plots, QQ plots).",
+  "out_expected_files": {
+    "script": "method.py",
+    "full_output": "full_method_out.json",
+    "mini_output": "mini_method_out.json",
+    "preview_output": "preview_method_out.json"
+  },
+  "upload_ignore_regexes": [
+    "(^|/)logs/",
+    "(^|/)\\.venv/"
+  ]
+}

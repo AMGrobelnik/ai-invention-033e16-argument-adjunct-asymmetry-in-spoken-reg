@@ -1,0 +1,85 @@
+{
+  "metadata": {
+    "source": "commul/universal_dependencies (HuggingFace)",
+    "ud_version": "v2.17",
+    "treebanks": [
+      "sl_sst",
+      "sl_ssj"
+    ],
+    "relation_categories": {
+      "ARGUMENT": [
+        "ccomp",
+        "csubj",
+        "csubj:outer"
+      ],
+      "ADJUNCT": [
+        "acl",
+        "acl:relcl",
+        "advcl"
+      ],
+      "MODIFIER": "nmod*/amod/advmod* prefixes + explicit set"
+    },
+    "sentence_length_definition": "count of non-PUNCT tokens",
+    "dependency_distance": "abs(head_1indexed_pos - dep_1indexed_pos)",
+    "case_richness_per_language": {
+      "sl": {
+        "case_richness_index": 0.9406,
+        "total_nominals": 81750,
+        "case_marked_nominals": 76890,
+        "low_confidence": false
+      }
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "slovenian_spoken_written",
+      "examples": [
+        {
+          "input": "sl|spoken|amod|ADJ|dist=1|len=6|cr=0.9406",
+          "output": "MODIFIER",
+          "metadata_language": "sl",
+          "metadata_modality": "spoken",
+          "metadata_treebank": "sl_sst",
+          "metadata_sentence_id": "Artur-J-Gvecg-P500001.s684-s685_reseg.1",
+          "metadata_deprel": "amod",
+          "metadata_dep_upos": "ADJ",
+          "metadata_dependency_distance": 1,
+          "metadata_sentence_length": 6,
+          "metadata_language_case_richness": 0.9406,
+          "metadata_head_pos": 2,
+          "metadata_dep_pos": 1
+        },
+        {
+          "input": "sl|spoken|amod|ADJ|dist=1|len=6|cr=0.9406",
+          "output": "MODIFIER",
+          "metadata_language": "sl",
+          "metadata_modality": "spoken",
+          "metadata_treebank": "sl_sst",
+          "metadata_sentence_id": "Artur-J-Gvecg-P500001.s684-s685_reseg.1",
+          "metadata_deprel": "amod",
+          "metadata_dep_upos": "ADJ",
+          "metadata_dependency_distance": 1,
+          "metadata_sentence_length": 6,
+          "metadata_language_case_richness": 0.9406,
+          "metadata_head_pos": 5,
+          "metadata_dep_pos": 4
+        },
+        {
+          "input": "sl|spoken|amod|ADJ|dist=1|len=6|cr=0.9406",
+          "output": "MODIFIER",
+          "metadata_language": "sl",
+          "metadata_modality": "spoken",
+          "metadata_treebank": "sl_sst",
+          "metadata_sentence_id": "Artur-J-Gvecg-P500001.s684-s685_reseg.1",
+          "metadata_deprel": "amod",
+          "metadata_dep_upos": "ADJ",
+          "metadata_dependency_distance": 1,
+          "metadata_sentence_length": 6,
+          "metadata_language_case_richness": 0.9406,
+          "metadata_head_pos": 7,
+          "metadata_dep_pos": 6
+        }
+      ]
+    }
+  ]
+}

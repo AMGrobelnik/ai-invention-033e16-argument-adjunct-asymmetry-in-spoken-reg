@@ -1,0 +1,267 @@
+{
+  "metadata": {
+    "evaluation_name": "Argument-Adjunct Asymmetry in Dependency Distance Minimization",
+    "description": "Statistical evaluation of the hypothesis that spoken language shows argument-adjunct asymmetry in dependency distance minimization across Universal Dependencies treebanks.",
+    "n_languages": 14,
+    "languages": [
+      "English",
+      "Slovenian",
+      "French"
+    ],
+    "metrics": {
+      "metric1_bootstrap_cis": "Bootstrap 95% CI on spoken-minus-written MDD residual difference per language per category",
+      "metric2_effect_sizes": "Cohen's d distribution across languages per relation category",
+      "metric3_morphological": "Pearson correlation between case richness and adjunct elongation",
+      "metric4_ablations": [],
+      "metric5_deviations": [
+        {
+          "language": "English",
+          "language_family": "Indo-European",
+          "word_order": "SVO",
+          "conforms": true,
+          "spoken_argument_delta_mdd": -0.0131,
+          "spoken_adjunct_delta_mdd": 0.0281,
+          "case_richness_index": 0.3733,
+          "ratio_nmod_to_other_adjuncts": 1.6338,
+          "violation_type": "none"
+        },
+        {
+          "language": "Slovenian",
+          "language_family": "Indo-European",
+          "word_order": "SVO",
+          "conforms": false,
+          "spoken_argument_delta_mdd": -0.0497,
+          "spoken_adjunct_delta_mdd": -0.033,
+          "case_richness_index": 0.9981,
+          "ratio_nmod_to_other_adjuncts": 1.1325,
+          "violation_type": "adjunct_too_short_in_spoken",
+          "violation_magnitude": 0.0827,
+          "working_hypothesis": "Slovenian (Indo-European, SVO) shows unexpected adjunct shortening in speech; low case richness (1.00) may force pre-verbal adjunct placement, limiting post-verbal adjunct elongation."
+        },
+        {
+          "language": "French",
+          "language_family": "Indo-European",
+          "word_order": "SVO",
+          "conforms": false,
+          "spoken_argument_delta_mdd": -0.0525,
+          "spoken_adjunct_delta_mdd": -0.0529,
+          "case_richness_index": 0.1916,
+          "ratio_nmod_to_other_adjuncts": 2.6826,
+          "violation_type": "adjunct_too_short_in_spoken",
+          "violation_magnitude": 0.1054,
+          "working_hypothesis": "French (Indo-European, SVO) shows unexpected adjunct shortening in speech; low case richness (0.19) may force pre-verbal adjunct placement, limiting post-verbal adjunct elongation."
+        }
+      ],
+      "metric6_interaction": {
+        "error": "Singular matrix",
+        "language_level_tests": {
+          "argument_one_sample_t": -0.24536418451407585,
+          "argument_one_sample_p": 0.8100053490080568,
+          "argument_mean_delta": -0.006906814914602244,
+          "adjunct_one_sample_t": 0.09207632735809496,
+          "adjunct_one_sample_p": 0.9280411727922766,
+          "adjunct_mean_delta": 0.0028258784066876536,
+          "asymmetry_paired_t": 0.23539062644624806,
+          "asymmetry_paired_p": 0.8175730242103796,
+          "asymmetry_wilcoxon_W": 50.0,
+          "asymmetry_wilcoxon_p": 0.9031982421875
+        }
+      }
+    },
+    "effect_size_stats": {
+      "argument": {
+        "mean_d": -0.007487180567150743,
+        "median_d": -1.7188067217878411e-06,
+        "sd_d": 0.1184338861535892,
+        "min_d": -0.32564402084106003,
+        "max_d": 0.16335652867188022,
+        "pct_significant_p05": 0.8571428571428571,
+        "n_languages": 14,
+        "per_language": [
+          {
+            "lang": "English",
+            "d": -0.01999130661315648
+          },
+          {
+            "lang": "Slovenian",
+            "d": -0.0656557897266985
+          },
+          {
+            "lang": "French",
+            "d": -0.07318883396703457
+          }
+        ]
+      },
+      "adjunct": {
+        "mean_d": 0.013104574545251239,
+        "median_d": -0.012859923606820867,
+        "sd_d": 0.14507009581975205,
+        "min_d": -0.20070169060184115,
+        "max_d": 0.33481136276467865,
+        "pct_significant_p05": 0.7857142857142857,
+        "n_languages": 14,
+        "per_language": [
+          {
+            "lang": "English",
+            "d": 0.03639427829254369
+          },
+          {
+            "lang": "Slovenian",
+            "d": -0.06271915716276365
+          },
+          {
+            "lang": "French",
+            "d": -0.060869355916542404
+          }
+        ]
+      },
+      "modifier": {
+        "mean_d": -0.008212088156974917,
+        "median_d": 0.018985164691116684,
+        "sd_d": 0.09227728228916227,
+        "min_d": -0.2462749271949558,
+        "max_d": 0.13333919715020706,
+        "pct_significant_p05": 0.7857142857142857,
+        "n_languages": 14,
+        "per_language": [
+          {
+            "lang": "English",
+            "d": 0.051085334304161394
+          },
+          {
+            "lang": "Slovenian",
+            "d": 0.13333919715020706
+          },
+          {
+            "lang": "French",
+            "d": 0.02881956135657438
+          }
+        ]
+      }
+    },
+    "morphological_modulation": {
+      "pearson_r": 0.19393021714828895,
+      "pearson_p_value": 0.5064853295231775,
+      "pearson_95ci_lower": -0.3752620203553473,
+      "pearson_95ci_upper": 0.6569160782479704,
+      "n_languages": 14,
+      "scatter_coordinates": [
+        {
+          "lang": "English",
+          "case_richness": 0.3732959006447622,
+          "delta_adjunct": 0.02811865996034902
+        },
+        {
+          "lang": "Slovenian",
+          "case_richness": 0.9981296758104738,
+          "delta_adjunct": -0.03304306234422482
+        },
+        {
+          "lang": "French",
+          "case_richness": 0.1915640464955691,
+          "delta_adjunct": -0.05286395575779043
+        }
+      ]
+    },
+    "conformance_rate": 0.2857,
+    "n_conforming": 4,
+    "n_nonconforming": 10
+  },
+  "metrics_agg": {
+    "argument_mean_cohens_d": -0.0075,
+    "argument_median_cohens_d": -0.0,
+    "argument_pct_significant": 0.8571,
+    "adjunct_mean_cohens_d": 0.0131,
+    "adjunct_median_cohens_d": -0.0129,
+    "adjunct_pct_significant": 0.7857,
+    "morphological_pearson_r": 0.1939,
+    "morphological_pearson_p": 0.5065,
+    "conformance_rate": 0.2857,
+    "n_languages_analyzed": 14,
+    "argument_mean_delta_mdd": -0.006907,
+    "argument_one_sample_p": 0.810005,
+    "adjunct_mean_delta_mdd": 0.002826,
+    "adjunct_one_sample_p": 0.928041,
+    "asymmetry_paired_p": 0.817573,
+    "asymmetry_wilcoxon_p": 0.903198
+  },
+  "datasets": [
+    {
+      "dataset": "universal_dependencies",
+      "examples": [
+        {
+          "input": "Language: English, Family: Indo-European, Word Order: SVO",
+          "output": "Argument Δ_MDD: -0.0131, Adjunct Δ_MDD: 0.0281",
+          "metadata_language": "English",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_case_richness": 0.3733,
+          "eval_argument_delta_mdd": -0.0131,
+          "eval_argument_n_spoken": 38970,
+          "eval_argument_n_written": 65324,
+          "eval_argument_ci_lower": -0.0211,
+          "eval_argument_ci_upper": -0.0051,
+          "eval_argument_boot_se": 0.0041,
+          "eval_argument_cohens_d": -0.02,
+          "eval_adjunct_delta_mdd": 0.0281,
+          "eval_adjunct_n_spoken": 9449,
+          "eval_adjunct_n_written": 14861,
+          "eval_adjunct_ci_lower": 0.0092,
+          "eval_adjunct_ci_upper": 0.0488,
+          "eval_adjunct_boot_se": 0.01,
+          "eval_adjunct_cohens_d": 0.0364,
+          "eval_conforms": 1.0,
+          "predict_violation_type": "none"
+        },
+        {
+          "input": "Language: Slovenian, Family: Indo-European, Word Order: SVO",
+          "output": "Argument Δ_MDD: -0.0497, Adjunct Δ_MDD: -0.0330",
+          "metadata_language": "Slovenian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_case_richness": 0.9981,
+          "eval_argument_delta_mdd": -0.0497,
+          "eval_argument_n_spoken": 9478,
+          "eval_argument_n_written": 31163,
+          "eval_argument_ci_lower": -0.0659,
+          "eval_argument_ci_upper": -0.0335,
+          "eval_argument_boot_se": 0.0085,
+          "eval_argument_cohens_d": -0.0657,
+          "eval_adjunct_delta_mdd": -0.033,
+          "eval_adjunct_n_spoken": 2106,
+          "eval_adjunct_n_written": 6691,
+          "eval_adjunct_ci_lower": -0.0588,
+          "eval_adjunct_ci_upper": -0.0084,
+          "eval_adjunct_boot_se": 0.0128,
+          "eval_adjunct_cohens_d": -0.0627,
+          "eval_conforms": 0.0,
+          "predict_violation_type": "adjunct_too_short_in_spoken"
+        },
+        {
+          "input": "Language: French, Family: Indo-European, Word Order: SVO",
+          "output": "Argument Δ_MDD: -0.0525, Adjunct Δ_MDD: -0.0529",
+          "metadata_language": "French",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_case_richness": 0.1916,
+          "eval_argument_delta_mdd": -0.0525,
+          "eval_argument_n_spoken": 13669,
+          "eval_argument_n_written": 47056,
+          "eval_argument_ci_lower": -0.0664,
+          "eval_argument_ci_upper": -0.0391,
+          "eval_argument_boot_se": 0.007,
+          "eval_argument_cohens_d": -0.0732,
+          "eval_adjunct_delta_mdd": -0.0529,
+          "eval_adjunct_n_spoken": 3286,
+          "eval_adjunct_n_written": 12690,
+          "eval_adjunct_ci_lower": -0.0847,
+          "eval_adjunct_ci_upper": -0.0195,
+          "eval_adjunct_boot_se": 0.0171,
+          "eval_adjunct_cohens_d": -0.0609,
+          "eval_conforms": 0.0,
+          "predict_violation_type": "adjunct_too_short_in_spoken"
+        }
+      ]
+    }
+  ]
+}

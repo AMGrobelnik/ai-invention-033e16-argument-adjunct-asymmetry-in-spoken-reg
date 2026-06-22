@@ -1,0 +1,260 @@
+{
+  "metadata": {
+    "hypothesis": "Argument-adjunct asymmetry in spoken-written dependency distance",
+    "verified_language_pairs": 2,
+    "verified_languages": [
+      "Slovenian",
+      "French"
+    ],
+    "timestamp": "2026-06-22",
+    "procedure_version": "1.0",
+    "data_source": "commul/universal_dependencies on HuggingFace (UD v2.17)"
+  },
+  "treebank_audit": [
+    {
+      "treebank_id": "sl_sst",
+      "language": "Slovenian",
+      "modality": "spoken",
+      "verified_spoken": true,
+      "source": "Transcribed natural speech from GOS corpus (Gigafida Oral Slovenian)",
+      "sentences": 6121,
+      "tokens": 98393,
+      "splits_loaded": [
+        "train",
+        "dev",
+        "test"
+      ],
+      "included": true,
+      "metadata_fold": "full"
+    },
+    {
+      "treebank_id": "sl_ssj",
+      "language": "Slovenian",
+      "modality": "written",
+      "verified_spoken": false,
+      "source": "Slovenian Standard Treebank \u2013 written news, fiction, web",
+      "sentences": 13435,
+      "tokens": 267097,
+      "splits_loaded": [
+        "train",
+        "dev",
+        "test"
+      ],
+      "included": true,
+      "metadata_fold": "full"
+    },
+    {
+      "treebank_id": "fr_rhapsodie",
+      "language": "French",
+      "modality": "spoken",
+      "verified_spoken": true,
+      "source": "Transcribed natural speech from Rhapsodie corpus (monologue/dialogue)",
+      "sentences": 2369,
+      "tokens": 32045,
+      "splits_loaded": [
+        "train",
+        "dev"
+      ],
+      "included": true,
+      "metadata_fold": "full"
+    },
+    {
+      "treebank_id": "fr_gsd",
+      "language": "French",
+      "modality": "written",
+      "verified_spoken": false,
+      "source": "French GSD \u2013 written web, news, Wikipedia",
+      "sentences": 16342,
+      "tokens": 400385,
+      "splits_loaded": [
+        "train",
+        "dev",
+        "test"
+      ],
+      "included": true,
+      "metadata_fold": "full"
+    }
+  ],
+  "dependency_metrics": [
+    {
+      "treebank": "sl_sst",
+      "language": "Slovenian",
+      "modality": "spoken",
+      "relation_category": "MODIFIER",
+      "mdd": 1.8528,
+      "mdd_residual": -0.0512,
+      "arc_count": 4209,
+      "arc_percentage": 44.8,
+      "metadata_fold": "full"
+    },
+    {
+      "treebank": "sl_sst",
+      "language": "Slovenian",
+      "modality": "spoken",
+      "relation_category": "ARGUMENT",
+      "mdd": 2.9009,
+      "mdd_residual": -0.084,
+      "arc_count": 3730,
+      "arc_percentage": 39.7,
+      "metadata_fold": "full"
+    },
+    {
+      "treebank": "sl_sst",
+      "language": "Slovenian",
+      "modality": "spoken",
+      "relation_category": "ADJUNCT",
+      "mdd": 6.8246,
+      "mdd_residual": 0.1503,
+      "arc_count": 1457,
+      "arc_percentage": 15.5,
+      "metadata_fold": "full"
+    },
+    {
+      "treebank": "sl_ssj",
+      "language": "Slovenian",
+      "modality": "written",
+      "relation_category": "MODIFIER",
+      "mdd": 1.6671,
+      "mdd_residual": -0.1345,
+      "arc_count": 12363,
+      "arc_percentage": 41.9,
+      "metadata_fold": "full"
+    },
+    {
+      "treebank": "sl_ssj",
+      "language": "Slovenian",
+      "modality": "written",
+      "relation_category": "ADJUNCT",
+      "mdd": 6.7047,
+      "mdd_residual": 0.2,
+      "arc_count": 5145,
+      "arc_percentage": 17.4,
+      "metadata_fold": "full"
+    },
+    {
+      "treebank": "sl_ssj",
+      "language": "Slovenian",
+      "modality": "written",
+      "relation_category": "ARGUMENT",
+      "mdd": 3.2241,
+      "mdd_residual": 0.0063,
+      "arc_count": 11982,
+      "arc_percentage": 40.6,
+      "metadata_fold": "full"
+    },
+    {
+      "treebank": "fr_rhapsodie",
+      "language": "French",
+      "modality": "spoken",
+      "relation_category": "ADJUNCT",
+      "mdd": 5.9932,
+      "mdd_residual": -0.0205,
+      "arc_count": 538,
+      "arc_percentage": 14.3,
+      "metadata_fold": "full"
+    },
+    {
+      "treebank": "fr_rhapsodie",
+      "language": "French",
+      "modality": "spoken",
+      "relation_category": "MODIFIER",
+      "mdd": 2.5097,
+      "mdd_residual": 0.1929,
+      "arc_count": 1428,
+      "arc_percentage": 37.9,
+      "metadata_fold": "full"
+    },
+    {
+      "treebank": "fr_rhapsodie",
+      "language": "French",
+      "modality": "spoken",
+      "relation_category": "ARGUMENT",
+      "mdd": 2.3641,
+      "mdd_residual": -0.1885,
+      "arc_count": 1797,
+      "arc_percentage": 47.8,
+      "metadata_fold": "full"
+    },
+    {
+      "treebank": "fr_gsd",
+      "language": "French",
+      "modality": "written",
+      "relation_category": "ARGUMENT",
+      "mdd": 3.5952,
+      "mdd_residual": 0.0363,
+      "arc_count": 15889,
+      "arc_percentage": 40.4,
+      "metadata_fold": "full"
+    },
+    {
+      "treebank": "fr_gsd",
+      "language": "French",
+      "modality": "written",
+      "relation_category": "MODIFIER",
+      "mdd": 2.2662,
+      "mdd_residual": 0.1038,
+      "arc_count": 15437,
+      "arc_percentage": 39.3,
+      "metadata_fold": "full"
+    },
+    {
+      "treebank": "fr_gsd",
+      "language": "French",
+      "modality": "written",
+      "relation_category": "ADJUNCT",
+      "mdd": 5.8391,
+      "mdd_residual": -0.1554,
+      "arc_count": 7958,
+      "arc_percentage": 20.3,
+      "metadata_fold": "full"
+    }
+  ],
+  "case_richness_index": [
+    {
+      "case_richness": 0.9406,
+      "noun_tokens": 68260,
+      "noun_with_case": 68260,
+      "pron_tokens": 13490,
+      "pron_with_case": 8630,
+      "language": "Slovenian",
+      "metadata_fold": "full"
+    },
+    {
+      "case_richness": 0.0993,
+      "noun_tokens": 79017,
+      "noun_with_case": 0,
+      "pron_tokens": 21419,
+      "pron_with_case": 9977,
+      "language": "French",
+      "metadata_fold": "full"
+    }
+  ],
+  "language_pairs_summary": [
+    {
+      "language": "Slovenian",
+      "spoken_treebank": "sl_sst",
+      "written_treebank": "sl_ssj",
+      "spoken_sentences": 6121,
+      "written_sentences": 13435,
+      "spoken_tokens": 98393,
+      "written_tokens": 267097,
+      "metadata_fold": "full",
+      "spoken_minus_written_argument_mdd_residual": -0.0902,
+      "spoken_minus_written_adjunct_mdd_residual": -0.0497,
+      "spoken_minus_written_modifier_mdd_residual": 0.0832
+    },
+    {
+      "language": "French",
+      "spoken_treebank": "fr_rhapsodie",
+      "written_treebank": "fr_gsd",
+      "spoken_sentences": 2369,
+      "written_sentences": 16342,
+      "spoken_tokens": 32045,
+      "written_tokens": 400385,
+      "metadata_fold": "full",
+      "spoken_minus_written_argument_mdd_residual": -0.2249,
+      "spoken_minus_written_adjunct_mdd_residual": 0.1349,
+      "spoken_minus_written_modifier_mdd_residual": 0.0891
+    }
+  ]
+}

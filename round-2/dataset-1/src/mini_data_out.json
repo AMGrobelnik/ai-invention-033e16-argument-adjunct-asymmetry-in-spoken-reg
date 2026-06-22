@@ -1,0 +1,45 @@
+{
+  "datasets": [
+    {
+      "dataset": "commul/universal_dependencies",
+      "examples": [
+        {
+          "input": "{\"text\": \"eee , iz tega časa so ohranjena še razna železna orodja , tudi pri nas , grobišča in tudi gradišča , tako imenovana , na hribih .\", \"sent_len\": 27, \"treebank\": \"sl_sst\", \"modality\": \"spoken\", \"language\": \"Slovenian\", \"arc_stats\": {\"ARGUMENT\": {\"count\": 1, \"mdd\": 4.0}, \"ADJUNCT\": {\"count\": 0, \"mdd\": null}, \"MODIFIER\": {\"count\": 8, \"mdd\": 2.625}}}",
+          "output": "{\"modality\": \"spoken\", \"language\": \"Slovenian\", \"argument_mdd\": 4.0, \"adjunct_mdd\": null, \"modifier_mdd\": 2.625, \"argument_count\": 1, \"adjunct_count\": 0, \"modifier_count\": 8, \"noun_with_case\": 5, \"pron_with_case\": 1, \"noun_total\": 5, \"pron_total\": 1}",
+          "metadata_fold": "full",
+          "metadata_treebank": "sl_sst",
+          "metadata_language": "Slovenian",
+          "metadata_modality": "spoken",
+          "metadata_sent_id": "Gos001.s12",
+          "metadata_sent_len": 27,
+          "metadata_row_index": 0,
+          "metadata_task_type": "dependency_distance_analysis"
+        },
+        {
+          "input": "{\"text\": \"zdaj , če pogledate še bolj natančno ta vzorec na vaški situli , mogoče tega pa res niste še nikoli pogledali .\", \"sent_len\": 22, \"treebank\": \"sl_sst\", \"modality\": \"spoken\", \"language\": \"Slovenian\", \"arc_stats\": {\"ARGUMENT\": {\"count\": 2, \"mdd\": 5.5}, \"ADJUNCT\": {\"count\": 0, \"mdd\": null}, \"MODIFIER\": {\"count\": 10, \"mdd\": 2.7}}}",
+          "output": "{\"modality\": \"spoken\", \"language\": \"Slovenian\", \"argument_mdd\": 5.5, \"adjunct_mdd\": null, \"modifier_mdd\": 2.7, \"argument_count\": 2, \"adjunct_count\": 0, \"modifier_count\": 10, \"noun_with_case\": 2, \"pron_with_case\": 0, \"noun_total\": 2, \"pron_total\": 0}",
+          "metadata_fold": "full",
+          "metadata_treebank": "sl_sst",
+          "metadata_language": "Slovenian",
+          "metadata_modality": "spoken",
+          "metadata_sent_id": "Gos001.s13",
+          "metadata_sent_len": 22,
+          "metadata_row_index": 1,
+          "metadata_task_type": "dependency_distance_analysis"
+        },
+        {
+          "input": "{\"text\": \"bomo videli , če bo to potegnilo , ja .\", \"sent_len\": 10, \"treebank\": \"sl_sst\", \"modality\": \"spoken\", \"language\": \"Slovenian\", \"arc_stats\": {\"ARGUMENT\": {\"count\": 2, \"mdd\": 3.0}, \"ADJUNCT\": {\"count\": 0, \"mdd\": null}, \"MODIFIER\": {\"count\": 0, \"mdd\": null}}}",
+          "output": "{\"modality\": \"spoken\", \"language\": \"Slovenian\", \"argument_mdd\": 3.0, \"adjunct_mdd\": null, \"modifier_mdd\": null, \"argument_count\": 2, \"adjunct_count\": 0, \"modifier_count\": 0, \"noun_with_case\": 0, \"pron_with_case\": 0, \"noun_total\": 0, \"pron_total\": 0}",
+          "metadata_fold": "full",
+          "metadata_treebank": "sl_sst",
+          "metadata_language": "Slovenian",
+          "metadata_modality": "spoken",
+          "metadata_sent_id": "Gos001.s15",
+          "metadata_sent_len": 10,
+          "metadata_row_index": 2,
+          "metadata_task_type": "dependency_distance_analysis"
+        }
+      ]
+    }
+  ]
+}

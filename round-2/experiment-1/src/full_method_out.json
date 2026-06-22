@@ -1,0 +1,253 @@
+{
+  "metadata": {
+    "method": "sentence-level bootstrap CI analysis with length normalization (proposed) vs raw log(MDD) (baseline)",
+    "n_languages": 1,
+    "languages": [
+      "sl"
+    ],
+    "b_bootstrap": 1000,
+    "data_path": "/ai-inventor/aii_data/runs/run_4SjiUyyE35Gi/3_invention_loop/iter_1/gen_art/gen_art_dataset_1/full_data_out.json",
+    "execution_date": "2026-06-22",
+    "data_filtering": {
+      "total_arcs_input": 128162,
+      "sentences_before_filter": 17686,
+      "sentences_after_filter": 6186,
+      "reason_exclusion": "sentences with <1 arc in any category (ARGUMENT, ADJUNCT, MODIFIER)"
+    },
+    "length_normalization": {
+      "procedure": "OLS log(mdd)~log(sent_len) per (language,category) POOLED spoken+written; residuals preserve modality mean difference",
+      "per_language_regression_stats": {
+        "sl": {
+          "pooled": {
+            "ADJUNCT": {
+              "slope": 0.2994810710266037,
+              "intercept": 0.8751631790971265,
+              "r_sq": 0.08313789229506549,
+              "note": "fitted on pooled spoken+written; residuals preserve spoken-written mean difference"
+            },
+            "ARGUMENT": {
+              "slope": 0.3651765287234728,
+              "intercept": -0.10943330090869541,
+              "r_sq": 0.0822512044962155,
+              "note": "fitted on pooled spoken+written; residuals preserve spoken-written mean difference"
+            },
+            "MODIFIER": {
+              "slope": 0.21680289597539731,
+              "intercept": -0.19415169235532648,
+              "r_sq": 0.07749915254881228,
+              "note": "fitted on pooled spoken+written; residuals preserve spoken-written mean difference"
+            }
+          }
+        }
+      }
+    },
+    "per_language_results": {
+      "sl": {
+        "language": "Slovenian",
+        "language_code": "sl",
+        "spoken_treebank": "sl_sst",
+        "written_treebank": "sl_ssj",
+        "n_sentences_spoken": 1313,
+        "n_sentences_written": 4873,
+        "categories": {
+          "ARGUMENT": {
+            "mean_diff_residual_mdd": -0.051080871655099426,
+            "ci_lower": -0.08224482788832975,
+            "ci_upper": -0.019342066481146315,
+            "se_bootstrap": 0.01641365939478712,
+            "n_spoken_sentences": 1313,
+            "n_written_sentences": 4873,
+            "cohens_d": -0.0909421544800411,
+            "cohens_d_ci_lower": -0.15011591080565267,
+            "cohens_d_ci_upper": -0.03232958263611429,
+            "interpretation": "shorter in spoken"
+          },
+          "ADJUNCT": {
+            "mean_diff_residual_mdd": -0.009860476813746986,
+            "ci_lower": -0.0377595963413889,
+            "ci_upper": 0.016493126680371815,
+            "se_bootstrap": 0.014023452302479044,
+            "n_spoken_sentences": 1313,
+            "n_written_sentences": 4873,
+            "cohens_d": -0.021517571311105915,
+            "cohens_d_ci_lower": -0.07802022671174533,
+            "cohens_d_ci_upper": 0.041454613164619736,
+            "interpretation": "no difference"
+          },
+          "MODIFIER": {
+            "mean_diff_residual_mdd": 0.11359227197752375,
+            "ci_lower": 0.09003953277457445,
+            "ci_upper": 0.13760019739798596,
+            "se_bootstrap": 0.012287015071085561,
+            "n_spoken_sentences": 1313,
+            "n_written_sentences": 4873,
+            "cohens_d": 0.3326062150290977,
+            "cohens_d_ci_lower": 0.2596426323755995,
+            "cohens_d_ci_upper": 0.4021216233860268,
+            "interpretation": "longer in spoken"
+          }
+        },
+        "asymmetry_index": {
+          "value": 0.04093879403785153,
+          "ci_lower": -0.0026667055939758972,
+          "ci_upper": 0.08172695413624761,
+          "se_bootstrap": 0.0213662149232482,
+          "cohens_d_asymmetry": 0.07984272202082143,
+          "interpretation": "near-zero"
+        },
+        "verdict": {
+          "argument_shorter_in_spoken": true,
+          "adjunct_not_shorter_in_spoken": true,
+          "asymmetry_positive": false,
+          "overall_confirmation": "partial"
+        }
+      }
+    },
+    "baseline_raw_mdd_comparison": {
+      "description": "Baseline: unpaired bootstrap of mean log(MDD) difference (spoken-written) WITHOUT length normalization",
+      "per_language": {
+        "sl": {
+          "ARGUMENT": {
+            "mean_diff_log_mdd": -0.0055529274873049594,
+            "ci_lower": -0.040567742124213914,
+            "ci_upper": 0.026844281226708087,
+            "note": "raw log(MDD) without length normalization — baseline for comparison"
+          },
+          "ADJUNCT": {
+            "mean_diff_log_mdd": 0.027476965237290152,
+            "ci_lower": -0.0009065978469392254,
+            "ci_upper": 0.05629669792612656,
+            "note": "raw log(MDD) without length normalization — baseline for comparison"
+          },
+          "MODIFIER": {
+            "mean_diff_log_mdd": 0.14062191200635327,
+            "ci_lower": 0.11578402441247437,
+            "ci_upper": 0.1660344508660715,
+            "note": "raw log(MDD) without length normalization — baseline for comparison"
+          }
+        }
+      }
+    },
+    "cross_language_test": {
+      "note": "Only 1 language — cross-language t-test not applicable."
+    },
+    "hypothesis_interpretation": {
+      "primary_prediction_1": "ARGUMENT relations show negative Δ (shorter in spoken = mean_diff < 0)",
+      "primary_prediction_2": "ADJUNCT relations show near-zero or positive Δ (not shorter in spoken)",
+      "primary_prediction_3": "Asymmetry index (Δ_ADJUNCT − Δ_ARGUMENT) is significantly positive",
+      "control_prediction": "MODIFIER relations show near-zero Δ",
+      "verdict_by_language": {
+        "sl": {
+          "argument_shorter_in_spoken": true,
+          "adjunct_not_shorter_in_spoken": true,
+          "asymmetry_positive": false,
+          "overall_confirmation": "partial"
+        }
+      },
+      "overall_support": "asymmetry confirmed in 0/1 languages, partial in 1, null/contradicted in 0"
+    },
+    "caveats_and_limitations": [
+      "Only Slovenian treebank pair in dataset (sl_sst=spoken, sl_ssj=written); no French data.",
+      "Cross-linguistic generalization not possible with n=1 language.",
+      "Bootstrap procedure uses unpaired resampling (spoken and written are disjoint sentence sets).",
+      "Length normalization via pooled log-linear regression; residuals may still reflect structure differences.",
+      "Asymmetry index CI barely includes 0 — borderline positive result.",
+      "MODIFIER relations show significantly longer dependencies in spoken — unexpected for control.",
+      "No multiple comparison correction applied (3 categories x 1 language = 3 tests).",
+      "Random seed fixed at 42 for reproducibility."
+    ],
+    "reproducibility": {
+      "code_repo": "method.py",
+      "data_inputs": [
+        "/ai-inventor/aii_data/runs/run_4SjiUyyE35Gi/3_invention_loop/iter_1/gen_art/gen_art_dataset_1/full_data_out.json"
+      ],
+      "data_outputs": [
+        "method_out.json",
+        "diagnostic_plots/"
+      ],
+      "random_seed": 42,
+      "package_versions": {
+        "pandas": "3.0.3",
+        "numpy": "2.5.0",
+        "scipy": "1.18.0",
+        "matplotlib": "3.11.0",
+        "statsmodels": "0.14.6"
+      }
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "slovenian_spoken_written_asymmetry",
+      "examples": [
+        {
+          "input": "Language=Slovenian | Category=ARGUMENT | Comparison=spoken-vs-written | n_spoken=1313 n_written=4873",
+          "output": "shorter in spoken",
+          "predict_our_method_normalized": "mean_diff=-0.0511 CI=[-0.0822,-0.0193] d=-0.091",
+          "predict_baseline_raw": "mean_diff_log_mdd=-0.0056 CI=[-0.0406,0.0268]",
+          "metadata_language": "sl",
+          "metadata_language_full": "Slovenian",
+          "metadata_category": "ARGUMENT",
+          "metadata_n_spoken": "1313",
+          "metadata_n_written": "4873",
+          "metadata_mean_diff_residual_mdd": "-0.051081",
+          "metadata_ci_lower": "-0.082245",
+          "metadata_ci_upper": "-0.019342",
+          "metadata_se_bootstrap": "0.016414",
+          "metadata_cohens_d": "-0.090942",
+          "metadata_ci_excludes_zero": "True"
+        },
+        {
+          "input": "Language=Slovenian | Category=ADJUNCT | Comparison=spoken-vs-written | n_spoken=1313 n_written=4873",
+          "output": "no difference",
+          "predict_our_method_normalized": "mean_diff=-0.0099 CI=[-0.0378,0.0165] d=-0.022",
+          "predict_baseline_raw": "mean_diff_log_mdd=0.0275 CI=[-0.0009,0.0563]",
+          "metadata_language": "sl",
+          "metadata_language_full": "Slovenian",
+          "metadata_category": "ADJUNCT",
+          "metadata_n_spoken": "1313",
+          "metadata_n_written": "4873",
+          "metadata_mean_diff_residual_mdd": "-0.00986",
+          "metadata_ci_lower": "-0.03776",
+          "metadata_ci_upper": "0.016493",
+          "metadata_se_bootstrap": "0.014023",
+          "metadata_cohens_d": "-0.021518",
+          "metadata_ci_excludes_zero": "False"
+        },
+        {
+          "input": "Language=Slovenian | Category=MODIFIER | Comparison=spoken-vs-written | n_spoken=1313 n_written=4873",
+          "output": "longer in spoken",
+          "predict_our_method_normalized": "mean_diff=0.1136 CI=[0.0900,0.1376] d=0.333",
+          "predict_baseline_raw": "mean_diff_log_mdd=0.1406 CI=[0.1158,0.1660]",
+          "metadata_language": "sl",
+          "metadata_language_full": "Slovenian",
+          "metadata_category": "MODIFIER",
+          "metadata_n_spoken": "1313",
+          "metadata_n_written": "4873",
+          "metadata_mean_diff_residual_mdd": "0.113592",
+          "metadata_ci_lower": "0.09004",
+          "metadata_ci_upper": "0.1376",
+          "metadata_se_bootstrap": "0.012287",
+          "metadata_cohens_d": "0.332606",
+          "metadata_ci_excludes_zero": "True"
+        },
+        {
+          "input": "Language=Slovenian | Category=ASYMMETRY_INDEX | Definition=delta_ADJUNCT_minus_delta_ARGUMENT | n_spoken=1313 n_written=4873",
+          "output": "near-zero",
+          "predict_our_method_normalized": "asymmetry_index=0.0409 CI=[-0.0027,0.0817] d=0.080",
+          "predict_baseline_raw": "not_applicable",
+          "metadata_language": "sl",
+          "metadata_language_full": "Slovenian",
+          "metadata_category": "ASYMMETRY_INDEX",
+          "metadata_n_spoken": "1313",
+          "metadata_n_written": "4873",
+          "metadata_mean_diff_residual_mdd": "0.040939",
+          "metadata_ci_lower": "-0.002667",
+          "metadata_ci_upper": "0.081727",
+          "metadata_se_bootstrap": "0.021366",
+          "metadata_cohens_d": "0.079843",
+          "metadata_ci_excludes_zero": "False"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+UD TREEBANK AUDIT REPORT
+============================================================
+
+TREEBANK_ID | LANGUAGE | VERIFIED_SPOKEN | SENTENCES | TOKENS | INCLUDED
+sl_sst         | Slovenian  | YES             | 6121      | 98393  | YES
+sl_ssj         | Slovenian  | NO              | 13435     | 267097 | YES
+fr_rhapsodie   | French     | YES             | 2369      | 32045  | YES
+fr_gsd         | French     | NO              | 16342     | 400385 | YES
+
+LANGUAGE PAIR DEPENDENCY DISTANCE DIFFERENCES (spoken - written, residual MDD):
+------------------------------------------------------------
+
+Slovenian (sl_sst vs sl_ssj):
+  ARGUMENT: -0.0902
+  ADJUNCT: -0.0497
+  MODIFIER: 0.0832
+
+French (fr_rhapsodie vs fr_gsd):
+  ARGUMENT: -0.2249
+  ADJUNCT: 0.1349
+  MODIFIER: 0.0891
+
+CASE RICHNESS INDEX:
+------------------------------------------------------------
+  Slovenian: 0.9406 (NOUN 68260/68260, PRON 8630/13490)
+  French: 0.0993 (NOUN 0/79017, PRON 9977/21419)
+
+LIMITATIONS:
+- fr_rhapsodie test split not available on HF; train+dev only
+- Morphological features stored as string; Case detection via 'Case=' substring match
+- Sentence-length residuals computed via OLS log-log regression per treebank
