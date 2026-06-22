@@ -1,0 +1,95 @@
+\begin{thebibliography}{14}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Biber(1988)]{Biber1988}
+Douglas Biber.
+\newblock \emph{Variation across Speech and Writing}.
+\newblock Cambridge University Press, 1988.
+
+\bibitem[Conrad and Biber(2001)]{Conrad2001}
+Susan Conrad and Douglas Biber.
+\newblock Variation in english grammar.
+\newblock In \emph{Variation in English Grammar}, volume~1 of \emph{Studies in
+  Language Variation and Change}, pages 1--21. Longman, 2001.
+
+\bibitem[Dobrovoljc(2025)]{Dobrovoljc2025}
+Kaja Dobrovoljc.
+\newblock Counting trees: a treebank-driven exploration of syntactic variation
+  in speech and writing across languages.
+\newblock \emph{Corpus Linguistics and Linguistic Theory}, 21\penalty0
+  (1):\penalty0 46--78, 2025.
+\newblock \doi{10.1515/cllt-2025-0046}.
+
+\bibitem[Dobrovoljc and Erjavec(2012)]{Dobrovoljc2012}
+Kaja Dobrovoljc and Toma{\v{z}} Erjavec.
+\newblock The universal dependencies treebank of spoken {S}lovenian.
+\newblock In \emph{Proceedings of the Eighth International Conference on
+  Language Resources and Evaluation (LREC 2012)}, pages 2891--2898, 2012.
+
+\bibitem[Futrell et~al.(2015)Futrell, Mahowald, and Gibson]{Futrell2015}
+Richard Futrell, Kyle Mahowald, and E.~Gibson.
+\newblock Large-scale evidence of dependency length minimization in 37
+  languages.
+\newblock In \emph{Proceedings of the National Academy of Sciences of the
+  United States of America}, volume 112, pages 10336--10341, 2015.
+\newblock \doi{10.1073/pnas.1502134112}.
+
+\bibitem[Gibson(1998)]{Gibson1998}
+Edward Gibson.
+\newblock Linguistic complexity: Locality of syntactic dependencies.
+\newblock \emph{Cognition}, 68\penalty0 (1):\penalty0 1--76, 1998.
+
+\bibitem[Greenberg(1966)]{Greenberg1966}
+Joseph~H. Greenberg.
+\newblock \emph{Language Universals: With Special Reference to Feature
+  Hierarchies}.
+\newblock Mouton, 1966.
+
+\bibitem[Hawkins(2004)]{Hawkins2004}
+John~A. Hawkins.
+\newblock \emph{Efficiency and Complexity in Grammars}.
+\newblock Oxford University Press, 2004.
+
+\bibitem[i~Cancho et~al.(2022)i~Cancho, G{\'o}mez-Rodr{\'i}guez, Esteban, and
+  Alemany-Puig]{FerreriCancho2022}
+Ramon~Ferrer i~Cancho, Carlos G{\'o}mez-Rodr{\'i}guez, Juan~Luis Esteban, and
+  Llu{\'i}s Alemany-Puig.
+\newblock The optimality of syntactic dependency distances.
+\newblock \emph{Physical Review E}, 105\penalty0 (1):\penalty0 014308, 2022.
+\newblock \doi{10.1103/PhysRevE.105.014308}.
+
+\bibitem[Lacheret et~al.(2014)Lacheret, Kahane, and Beliao]{Lacheret2014}
+Anne Lacheret, Sylvain Kahane, and Julie Beliao.
+\newblock {R}hapsodie: A prosodic-syntactic treebank for spoken {F}rench.
+\newblock In \emph{Proceedings of the Ninth International Conference on
+  Language Resources and Evaluation (LREC 2014)}, pages 57--63, 2014.
+
+\bibitem[Liu(2008)]{Liu2008}
+Haitao Liu.
+\newblock Dependency distance as a metric of language comprehension difficulty.
+\newblock \emph{Journal of Cognitive Science}, 9\penalty0 (2):\penalty0
+  159--191, 2008.
+
+\bibitem[Poiret and Liu(2023)]{Poiret2023}
+Chlo{\'e} Poiret and Haitao Liu.
+\newblock Cross-linguistic variations in dependency distance minimization.
+\newblock In \emph{Proceedings of the 37th Pacific Asia Conference on Language,
+  Information and Computation (PACLIC 37)}, pages 234--243, Hong Kong, 2023.
+
+\bibitem[Sinnem{\"a}ki and Haakana(2023)]{Sinnemaki2023}
+Kaius Sinnem{\"a}ki and Viljami Haakana.
+\newblock Head and dependent marking and dependency length in possessive noun
+  phrases: a typological study of morphological and syntactic complexity.
+\newblock \emph{Linguistics Vanguard}, 9\penalty0 (1):\penalty0 45--57, 2023.
+\newblock \doi{10.1515/lingvan-2021-0074}.
+
+\bibitem[{Universal Dependencies contributors}(2024)]{UDv217}
+{Universal Dependencies contributors}.
+\newblock Universal {D}ependencies v2.17.
+\newblock \url{https://universaldependencies.org/}, 2024.
+
+\end{thebibliography}

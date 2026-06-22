@@ -1,0 +1,14 @@
+{
+  "title": "Argument-Adjunct Asymmetry in Spoken-Register Dependency Distance",
+  "summary": "Generated a complete 13-page publication-ready LaTeX paper titled 'Argument-Adjunct Asymmetry in Spoken-Register Dependency Distance Minimization'. The paper includes: Abstract; Introduction with 4 numbered contributions; Related Work (4 subsections: DDM as Universal, Register Variation, Morphology/Typology, Incremental Processing); Methods (5 subsections: Data/Treebank Selection, Treebank Audit, Arc Classification, Sentence-Length Normalization, Statistical Analysis); Results (4 subsections: Main Slovenian finding, Cross-Language Comparison, Robustness Variants, Statistical Power table); Discussion (4 subsections: Incremental Processing, Modifier Control, Morphological Case Richness, Limitations, Methodological Lessons); Conclusion with future directions. All 3 figures from available_figures were inserted as figure* (21:9 aspect ratio) with correct captions and labels: fig1 (Slovenian bootstrap CIs), fig2 (Cross-language comparison), fig3 (Robustness across 5 variants). Bibliography built from 14 hand-crafted BibTeX entries covering all paper references (Futrell 2015, Ferrer-i-Cancho 2022, Liu 2008, Dobrovoljc 2025, Biber 1988, Conrad 2001, Poiret 2023, Sinnemaki 2023, Hawkins 2004, Greenberg 1966, Gibson 1998, UD contributors 2024, Dobrovoljc 2012, Lacheret 2014). Compiled successfully with pdflatex/bibtex/pdflatex/pdflatex using plainnat bibliography style. Visual review of all 13 pages confirmed clean layout, correct figure placement, no cut-off text or formatting issues.",
+  "out_expected_files": {
+    "paper_tex_path": "paper.tex",
+    "paper_pdf_path": "paper.pdf",
+    "references_bib_path": "references.bib",
+    "figure_paths": [
+      "figures/fig1_v0.jpg",
+      "figures/fig2_v0.jpg",
+      "figures/fig3_v0.jpg"
+    ]
+  }
+}
